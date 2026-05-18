@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCA Student Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --text: #333;
+      --card: #fff;
+      --primary: #00adb5;
+      --nav: #444;
+      --header: #222;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f1f1f1;
+      --card: #1e1e1e;
+      --primary: #00adb5;
+      --nav: #1a1a1a;
+      --header: #000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--header);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      animation: fadeDown 1s ease;
+    }
+
+    nav {
+      background: var(--nav);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: var(--primary);
+      border: none;
+      padding: 8px 12px;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s forwards;
+    }
+
+    .section:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .skills span {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .skills span:hover {
+      transform: scale(1.1);
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    ul li:hover {
+      transform: translateX(10px);
+      color: var(--primary);
+    }
+
+    footer {
+      background: var(--header);
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ADARSH DEVAL</h1>
+  <p>BCAI Student | SOFTWARE ENGINEER</p>
+  <button class="toggle-btn" onclick="toggleMode()">Dark Mode</button>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a Hardworking BCAI student from Badaun with a strong interest in web development,
+      programming, and emerging technologies. I enjoy building projects that
+      solve real-world problems,Ready to Grab the upcoming opportunity as a good software engineer or as a resource for a company that help each and everyone for any problem at any time 
+      and improve yourself each and every moment 
+      Thank you !
+    </p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+       <span>Machine learning</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>Artificial intelingence</span>
+      <span>Data visualization</span>
+      <span>Java</span>
+      <span>Power BI</span>
+      <span>Data science</span>
+      <span>DBMS</span>
+    <span>Linux OS</span>
+     <span>Computer networking</span>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Customer Churn Prediction</strong></li>
+      <li><strong>Frontend Fitness Website</strong></li>
+      <li><strong>Student Management System</strong></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email:adarshdeval46@gmail.com</p>
+    <p>Phone: +91-9058281154</p>
+    <p>LinkedIn: https://www.linkedin.com/in/adarsh-deval-725a21322/</p>
+    <p>GitHub: https://github.com/adarshdeval46</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>END OF PAGE | All Rights Reserved</p>
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+</body>
+</html>
